@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import BookList from './components/BookList';
 import './App.css';
+
+const bookData = [
+  { title: 'Harry Poter', description: 'Wizzards  and stuff' },
+  { title: 'Programing with JS', description: 'Code First' },
+  { title: 'The Bible', description: 'The God ....' },
+  { title: 'Chronicle of Narnia', description: 'Most fantastic book' }
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <h1>
+          Book Library children
+        </h1>
+      </Header>
+      <BookList books={bookData} />
+      <Footer />
     </div>
   );
 }
